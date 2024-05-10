@@ -1,0 +1,719 @@
+::selection {
+    background: rgba(114, 0, 185, 0.279);
+    backdrop-filter: blur(2px);
+  }
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    background-image: url(../images/background.png);
+    background-color: #000000;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+#index-body {
+    font-family: 'League Spartan', sans-serif;
+    background-image: url(../images/background2.png);
+    background-color: #000000;
+    /* background-size: 100%; */
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+#pl-logo {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 40px;
+    top: 0;
+    left: 0;
+    height: 89.25px;
+    width: 70.5px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.welcomeTitle {
+    font-size: 120px;
+    color: white;
+    text-align: left;
+    font-weight: 700;
+    margin-left: 5%;
+    margin-bottom: 25px;
+}
+
+#make-team-button {
+    margin-left: 5%;
+    height: 70px;
+    width: 300px;
+    border-radius: 50px;
+    border: 1px solid;
+    border-color: #EEACFF;
+    background: transparent;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #EEACFF;
+    cursor: pointer;
+    transition: 1s;
+    user-select: none;
+}
+
+#make-team-button:hover {
+    background: linear-gradient(45deg, #e88aff48, #b846ff42);
+    backdrop-filter: blur(2px);
+    color: rgb(68, 0, 110);
+    transform: scale(1.03);
+    transition: 0.5s;
+}
+
+.cards-images {
+    position: absolute;
+    right: 8%;
+    top: 0;
+    width: 30%;
+    
+}
+
+.cards-images img {
+    width: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.cards-container {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.yourTeam {
+    color: beige;
+}
+
+.superior-menu {
+    position: sticky;
+    background-image: url(../images/pl-background.jpg);
+    width: 90%;
+    height: 80px;
+    background-size: cover;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#backButton {
+    position: absolute;
+    top: 0;
+    left: 7px;
+    background: #00FF87;
+    height: 65px;
+    width: 65px;
+    border: none;
+    border-radius: 14px;
+    margin-top: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#backButton img {
+    width: 100%;
+}
+
+.your-team-name {
+    margin: 0;
+    color: white;
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+#addPlayerButton {
+    position: absolute;
+    right: 0;
+    margin-right: 7px;
+    height: 65px;
+    width: 130px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00FF87;
+    border: none;
+}
+
+.addPlayerText {
+    margin: 0;
+    color: #38003d;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.addPlayerWindow {
+    width: 830px;
+    height: 500px;
+    flex-shrink: 0;
+    border-radius: 41px;
+    background-image: url(../images/form-background.png);
+    background-size: cover;
+    backdrop-filter: blur(9px);
+
+    /* Centrado horizontal */
+    position: absolute;
+    margin-top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* Centrado vertical */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#edit-form {
+    width: 830px;
+    height: 500px;
+    flex-shrink: 0;
+    border-radius: 41px;
+    background-image: url(../images/form-background.png);
+    background-size: cover;
+    backdrop-filter: blur(9px);
+    position: absolute;
+    margin-top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-header {
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    margin-left: 35px;
+    height: 100%;
+    width: 35%;
+}
+
+.modal-title {
+    color: white;
+    font-size: 55px;
+    font-weight: 700;
+    margin: 0;
+    position: absolute;
+    top: 25%;
+    line-height: 1.2;
+}
+
+#create-player-form {
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.form-floating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#form-floating-1 {
+    margin-right: 30px;
+}
+
+#close-create-player-form {
+    margin: 0;
+    padding: 0;
+    background: #00FF87;
+    height: 55px;
+    width: 55px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    opacity: 100;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+}
+
+#close-create-player-form img {
+    width: 70%;
+}
+
+/* Carta en tamaño edicion*/
+.blankCard {
+    min-width: 211.5px;
+    height: 247.38px;
+    border-radius: 9%;
+    background: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 50px;
+}
+
+.blankPuntuationFrame {
+    position: absolute;
+    right: 6px;
+    bottom: 17%;
+    width: 45px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid #FFF;
+    background: rgba(0, 0, 0, 0.00);
+    border-radius: 21.5574px;
+    z-index: 10;
+}
+
+.blankPuntuation {
+    font-size: 24px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: -5px;
+
+}
+
+/* Carta en tamaño en plantilla*/
+.card {
+    width: 141px;
+    height: 164.92px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: none;
+    user-select: none;
+}
+
+#edit-card {
+    scale: 2;
+    position: absolute;
+    left: 0;
+    margin-left: 100px;
+}
+
+.my-team-player {
+    width: 141px;
+    height: 164.92px;
+    border-radius: 10%;
+    background: #ebebeb;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-team-player:hover {
+    background: #636363;
+    transition: 0.5s;
+}
+
+.my-team-player .btn {
+    display: none; /* Oculta el botón por defecto */
+  }
+  
+  .my-team-player:hover .btn {
+    display: block; /* Muestra el botón cuando se hace hover sobre el div */
+  }
+
+.my-team-layout {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    width: 65%;
+    margin: auto;
+    margin-top: 2%;
+}
+
+.my-team-att, .my-team-def, .my-team-mid, .my-team-gk {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.buttons-container:hover {
+    background: linear-gradient(45deg, #ba157dad, #2934abab, #3480daab);
+    backdrop-filter: blur(2px);
+    z-index: 999;
+}
+
+.buttons-container {
+    height: 100%;
+    width: 100%;
+    bottom: 0 !important;
+    right: 0 !important;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cardColor {
+    background: rgb(120, 201, 247);
+    background-image: url("../images/pattern.png");
+    background-size: cover;
+    width: 97%;
+    height: 97%;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.topInfo {
+    position: absolute;
+    width: 85%;
+    height: 10%;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+}
+
+.playerNationality {
+    position: relative;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2px;
+}
+
+.flag-img {
+    height: 100%;
+}
+
+.playerPosition {
+    position: relative;
+    width: 60%;
+    margin-top: 0;
+    font-family: 'League Spartan', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.playerHeight {
+    position: relative;
+    width: 30%;
+    margin-top: 0;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.playerName {
+    position: absolute;
+    width: 85%;
+    bottom: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.badge {
+    width: 80%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 30%;
+}
+
+.teamShield {
+    max-width: 100%;
+}
+
+.playerImageContainer {
+    width: 70%;
+    height: 90%;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    mask-image: linear-gradient(0deg, transparent, black, black, black, black);
+}
+
+.playerImage {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    /* -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); */
+}
+
+.puntuationFrame {
+    position: absolute;
+    right: 10px; 
+    bottom: 15%; 
+    width: 40.052px; 
+    height: 28.272px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid #FFF;
+    background: rgba(0, 0, 0, 0.00);
+    border-radius: 14.3716px;
+    z-index: 10;
+}
+
+.puntuation {
+    font-size: 20px; 
+    color: #000000;
+}
+
+.buttons-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 999;
+}
+
+.card:hover .buttons-container {
+    opacity: 1;
+}
+
+#updatePlayerButton {
+    background: #00FF87;
+    height: 40px;
+    width: 100px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #38003d;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#deletePlayerButton{
+    background: #FF0000;
+    height: 40px;
+    width: 100px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#teamSelect {
+    border-radius: 50px;
+    border: 2px solid;
+    border-color: #EEACFF;
+    background-color: transparent;
+    color: #EEACFF;
+    outline: none !important;
+    box-shadow: none;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+#teamSelect option {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+#playerNameInput {
+    border-radius: 50px;
+    border: 2px solid;
+    border-color: #EEACFF;
+    background-color: transparent;
+    color: #EEACFF;
+    outline: none !important;
+    box-shadow: none;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    width: 200px;
+}
+
+#playerNameInput::placeholder {
+    color: #EEACFF;
+    opacity: 0.5;
+}
+
+#playerImage-placeholder {
+    height: 55px;
+    width: 150px;
+    border-radius: 14px;
+    border: 2px solid;
+    border-color: #EEACFF;
+    background-color: #bf7dcf;
+    color: #38003d;
+    padding-right: 5px;
+    outline: none !important;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-weight: 700;
+    transition: 1s;
+}
+
+#playerImage-placeholder:hover {
+    transform: scale(1.03);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#nationalitySelect {
+    border-radius: 50px;
+    border: 2px solid;
+    border-color: #EEACFF;
+    background-color: transparent;
+    color: #EEACFF;
+    outline: none !important;
+    box-shadow: none;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    width: 200px;
+}
+
+#nationalitySelect option {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+#positionSelect {
+    border-radius: 50px;
+    border: 2px solid;
+    border-color: #EEACFF;
+    background-color: transparent;
+    color: #EEACFF;
+    outline: none !important;
+    box-shadow: none;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    width: 200px;
+}
+
+#positionSelect option {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+#heightSelect {
+    border-radius: 50px;
+    border: 2px solid;
+    border-color: #EEACFF;
+    background-color: transparent;
+    color: #EEACFF;
+    outline: none !important;
+    box-shadow: none;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    width: 200px;
+}
+
+#heightSelect option {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+#puntuationSelect {
+    border-radius: 50px;
+    border: 2px solid;
+    border-color: #EEACFF;
+    background-color: transparent;
+    color: #EEACFF;
+    outline: none !important;
+    box-shadow: none;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    width: 200px;
+}
+
+#puntuationSelect option {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+#create-player-button {
+    height: 55px;
+    width: 150px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00FF87;
+    border: none;
+    color: #38003d;
+    font-size: 20px;
+    font-weight: 700;
+    transition: 1s;
+}
+
+#create-player-button:hover {
+    transform: scale(1.03);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#edit-player-button {
+    height: 55px;
+    width: 150px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00FF87;
+    border: none;
+    color: #38003d;
+    font-size: 20px;
+    font-weight: 700;
+    transition: 1s;
+}
+
+#edit-player-button:hover {
+    transform: scale(1.03);
+    transition: 0.5s;
+    cursor: pointer;
+}
